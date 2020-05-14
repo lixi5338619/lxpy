@@ -34,17 +34,30 @@ class DateGo:
         return [y,m,d]
 
 
-    @staticmethod
-    def timec_to_dtime(timec):
-        """
-        把时间戳转换为 年月日时分 格式
-        :return: %Y-%m-%d %H:%M:%S
-        """
-        timeArray = time.localtime(int(timec))
+    @staticmethod                      # 把时间戳 转换为 年月日时分 格式
+    def timec_change_dtime(time1):
+        if len(str(time1))==13:
+            time1 = int(time1) / 1000.0
+        timeArray = time.localtime(int(time1))
         otherStyleTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
         return otherStyleTime
 
+    
+    @staticmethod                      # 负数时间戳转换/转换1970年之前的时间戳
+    def netimec_to_dtime(timestamp,valid=True):
+        """ 
+        :param  timestamp: 负数时间戳
+        :param  valid: 默认增加8小时
+        :return:  年-月-日 时:分:秒
+        if OverflowError , date value out of range: timestamp/1000
+        """
+        if valid:
+            timestamp = int(timestamp) + 8*3600
+        result = datetime.datetime(1970, 1, 1) + datetime.timedelta(seconds=int(timestamp))
+        return result
 
+
+    
     @staticmethod
     def dtime_to_timec(tss1):
         """
