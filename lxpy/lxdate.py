@@ -167,7 +167,7 @@ class DateGo:
 
 
     @staticmethod
-    def difference_time(date2):
+    def difference_timenow(date2):
         """
         当前时间和指定时间的差/-> 秒
         :param date2:
