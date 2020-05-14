@@ -3,6 +3,7 @@
 
 from distutils.core import setup
 
+
 setup(
     name = 'lxpy',
     version = '1.1.0',
@@ -10,5 +11,6 @@ setup(
     author = 'ying5338619',
     author_email = '125066648@qq.com',
     url='https://github.com/lixi5338619/lxpy.git',
+    install_requires=["wheel"],
     description = 'Web crawler and data processing toolkit !'
     )
