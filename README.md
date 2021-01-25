@@ -1,9 +1,14 @@
 # lxpy
 Web crawler and data processing toolkit !
 
+pypi: https://pypi.org/project/lxpy/
 
-一些小工具吧，想起来什么常用的就添加一下。
+安装方法： pip install lxpy
 
+
+---
+
+主要还是一些小工具吧，想起来什么常用的就添加一下。
 
 lxdata : 处理时间的文件
 
