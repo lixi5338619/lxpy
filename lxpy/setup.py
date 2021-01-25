@@ -6,7 +6,7 @@ from distutils.core import setup
 
 setup(
     name = 'lxpy',
-    version = '1.1.0',
+    version = '1.2.0',
     py_modules = ['lxpy'],
     author = 'ying5338619',
     author_email = '125066648@qq.com',
