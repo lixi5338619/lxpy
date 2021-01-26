@@ -5,6 +5,7 @@ pypi: https://pypi.org/project/lxpy/
 
 安装方法： pip install lxpy
 
+如果下载最新版本失败的话，换其他国内下载源试试。
 
 ---
 
