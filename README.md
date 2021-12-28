@@ -17,3 +17,12 @@ lxheader：headers的转换及生成
 
 lxtools：jsonp转json、html去除标签、xpath的正则
 
+**LXPY 1.3.0**
+
+新增了加密算法和编码的加解密
+
+新增了一些密码算法
+
+新增了一些解析方法
+
+新增了js还原方法
