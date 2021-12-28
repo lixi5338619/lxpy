@@ -23,3 +23,19 @@ def re_xpath(node,compile):
     result = node.xpath(compile, namespaces=namespaces)
     return result
 
+
+def url_parse(url:str):
+    # 提取url中的params参数，返回item
+    p = url.split('?')[1]
+    item = {}
+    if '&' in p:
+        param = p.split('&')
+        for v in param:
+            k = v.split('=')
+            item[k[0]] = k[1]
+    else:
+         k = p.split('=')
+         item[k[0]] = k[1]
+    return item
+
+
