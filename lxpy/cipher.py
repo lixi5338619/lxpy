@@ -12,7 +12,7 @@ def caesar(t, n, keys='abcdefghijklmnopqrstuvwxyz'):
     return r
 
 
-# 莫斯密码
+# 摩斯密码
 def morse_dec(string, a='.', b='-', p=None):
     morse = {
         '.-'  :'A', '-...':'B', '-.-.':'C', '-..' :'D', '.'   :'E',
