@@ -30,6 +30,21 @@ def copy_headers_dict(headers_raw):
     return result_dict
 
 
+import re
+def headers_dict(s: str) -> dict:
+    """
+        headers转化
+    :param s:
+    :return:
+    """
+    ss = re.findall("(.*?):(.*?)\n", s)
+    d = {
+        k.strip(): v.strip()
+        for k, v in ss
+    }
+    return d
+
+
 
 
 import random
