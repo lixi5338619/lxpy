@@ -242,3 +242,15 @@ class DateGo:
         ctime = time.strftime(to_format,time_struct)
         return ctime
 
+    
+    @staticmethod
+    def time_handler(target_time: str):
+        """
+        UTC世界标准时间（包含T和Z） 转 北京时间
+        :param target_time:
+        :return:
+        """
+        _date = datetime.strptime(target_time, "%Y-%m-%dT%H:%M:%S.%fZ")
+        local_time = _date + timedelta(hours=8)
+        end_time = local_time.strftime("%Y-%m-%d %H:%M:%S")
+        return end_time
